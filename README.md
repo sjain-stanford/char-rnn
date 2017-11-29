@@ -2,7 +2,7 @@
 
 Character level language model using RNN.
 
-Reference: https://gist.github.com/karpathy/d4dee566867f8291f086
+Reference: https://gist.github.com/karpathy/d4dee566867f8291f086 https://github.com/karpathy/char-rnn
 
 Data sources:
 1) Leo Tolstoy's War and Peace (3.3 MB): [ref](http://cs.stanford.edu/people/karpathy/char-rnn/)
