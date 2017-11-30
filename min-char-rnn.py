@@ -6,7 +6,7 @@
 Vanilla RNN equations
 Hidden vector: h_t = tanh( Wxh . x_t  +  Whh . h_t-1  +  bh )
 Output vector: y_t = ( Why . h_t  +  by )
-Probabilities: p_t = exp( y_t )
+Probabilities: p_t = exp( y_t ) / sum(exp( y_t ))
 """
 
 import numpy as np
@@ -35,7 +35,7 @@ Why = np.zeros(hidden_size, vocab_size) * 0.01  # hidden to output
 bh = np.zeros((hidden_size, 1))  # bias for hidden layer
 by = np.zeros((vocab_size, 1))  # bias for output layer
 
-# Forward and Backward Prop
+
 def loss_function(inputs, labels, hprev):
 """
  Params:
@@ -49,7 +49,28 @@ def loss_function(inputs, labels, hprev):
  - dbh, dby: gradients wrt biases
  - hnext: last hidden state vector of shape (hidden_size, 1)
 """
+  x, h, y, p = {}, {}, {}, {}
+  h[-1] = np.copy(hprev)
+  loss = 0
+  
+  # Forward pass
+  for t in range(len(inputs)):
+    x[t] = np.zeros((vocab_size, 1))  # input vector at t of shape (vocab_size, 1)
+    x[t][inputs[t]] = 1  # one-hot encoding
+    h[t] = np.tanh(np.dot(Wxh, x[t]) + np.dot(Whh, h[t-1]) + bh)  # hidden state vector at t of shape (hidden_size, 1)
+    y[t] = np.dot(Why, h[t]) + by  # output vector at t (unnormalized log probabilities for next char) of shape (vocab_size, 1)
+    p[t] = np.exp(y[t]) / np.sum(np.exp(y[t]))  # probabilities for next char (softmax) of shape (vocab_size, 1)
+    loss += -np.log(p[t][labels[t], 0])  # cross-entropy loss (negative log likelihood)
+  hnext = h[len(inputs) - 1]
 
+  dWxh, dWhh, dWhy = np.zeros_like(Wxh), np.zeros_like(Whh), np.zeros_like(Why)
+  dbh, dby = np.zeros_like(bh), np.zeros_like(by)
+  
+  # Backward pass
+  for t in reversed(range(len(inputs))):
+    dy = 
+     
+  return loss, dWxh, dWhh, dWhy, dbh, dby, hnext
 
 # MAIN 
 n = 0  # iteration counter
