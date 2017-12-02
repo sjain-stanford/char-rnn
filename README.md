@@ -16,3 +16,57 @@ $ git clone https://github.com/torvalds/linux.git
 $ cd linux
 $ find . -name "*.[c|h]" | shuf | xargs cat > linux.txt
 ```
+
+
+min-char-rnn output
+```
+I all come me.
+
+TRWARD:
+I saining?
+
+PERMIAN:
+She, I wills my lib, a for thou, yet
+Benich,
+Detixting
+For a martyan this thee:
+ -----
+iter 7206300, loss: 44.407445
+-----
+ Vork'ty tword,
+And a so the inseinge leve
+Compolt and Cay, cosit wither would iset to that nies there honour of is wourger, myet.
+If think your me!
+
+Sidge--
+Wisefray I a mest came tay untise it,
+A me
+ -----
+iter 7206400, loss: 44.328364
+-----
+  thinking and they smears are dints my lymer' or for the shile'd well that I Ho'en you,
+The poyas's me it Rest wized to dnabyour, will but'a?
+
+Neghnee larget.
+
+DUKE ANDIK:
+Dors.
+
+GLOUCESTER:
+What!
+You
+ -----
+iter 7206500, loss: 44.499381
+-----
+
+Thosowarth'
+Acolly you quanss.
+
+TRAILE:
+To for him loved oftoued?
+Rungtices I slight arree;
+I beace her you well, arce have desent, for in sees papest your teave
+sholl thistefays, sir: priemace Arros
+ -----
+
+```
