@@ -11,6 +11,7 @@ Data sources:
 4) Linux kernel (6.2 MB): [ref](http://cs.stanford.edu/people/karpathy/char-rnn/)
 5) Wikipedia text (100 MB): [ref](http://prize.hutter1.net/)
 6) Entire Linux source code (474 MB): [ref 1](http://cs.stanford.edu/people/karpathy/char-rnn/) / [ref 2](https://github.com/torvalds/linux)
+7) Arxiv abstracts (46 kB): [ref](https://github.com/chiphuyen/stanford-tensorflow-tutorials/blob/master/data/arvix_abstracts.txt)
 ```
 $ git clone https://github.com/torvalds/linux.git
 $ cd linux
