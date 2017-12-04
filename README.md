@@ -11,6 +11,7 @@ Data sources:
 4) Linux kernel (6.2 MB): [ref](http://cs.stanford.edu/people/karpathy/char-rnn/)
 5) Wikipedia text (100 MB): [ref](http://prize.hutter1.net/)
 6) Entire Linux source code (474 MB): [ref 1](http://cs.stanford.edu/people/karpathy/char-rnn/) / [ref 2](https://github.com/torvalds/linux)
+7) Arxiv abstracts (46 kB): [ref](https://github.com/chiphuyen/stanford-tensorflow-tutorials/blob/master/data/arvix_abstracts.txt)
 ```
 $ git clone https://github.com/torvalds/linux.git
 $ cd linux
@@ -19,18 +20,37 @@ $ find . -name "*.[c|h]" | shuf | xargs cat > linux.txt
 
 
 min-char-rnn output
+
 ```
-I all come me.
+iter 2500, loss: 64.751443
+-----
+ cam's we ofowkopris, coulst ,
+A auss hong t'an af youkz, bes,
+Rty, ic-
+H Cout, :of woucd ungr pgivow: cave your sircer hics, I secese, Iuc uitf son court soo natt hure sor,
+Br hory med Wiun:
 
-TRWARD:
-I saining?
-
-PERMIAN:
-She, I wills my lib, a for thou, yet
-Benich,
-Detixting
-For a martyan this thee:
+CIRUTUS:
  -----
+iter 2600, loss: 64.002116
+-----
+
+fhpooj shs, kyifs thom it uotmurd'd se care.
+
+BNUS:
+Toumhe t andius; t, yoor, jon? bp yethes bly youias aur, i, io, d
+wns;t'gorn thavanr. wocigivepnoo rresptin hiuvteemor he'envone hinsler rowvorame
+ -----
+iter 2700, loss: 63.210558
+-----
+ el hank the weheld wowthad gltto that mo hathich ve phe pomy, wupe wore the sle the thintdatis nsm horl:
+Have yhe yory ul p er,
+th't to thit; yor or. ftS
+Brimiot pames pes hos entaohet petire me hher
+ -----
+```
+
+```
 iter 7206300, loss: 44.407445
 -----
  Vork'ty tword,
@@ -68,5 +88,4 @@ Rungtices I slight arree;
 I beace her you well, arce have desent, for in sees papest your teave
 sholl thistefays, sir: priemace Arros
  -----
-
 ```
